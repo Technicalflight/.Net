@@ -22,14 +22,7 @@ de4dot：https://github.com/de4dot/de4dot
 ![image-20220126001529887](./king/images/2.png)
 
 
-
-
-
-
-
-
-
-
+## 开源协议
 
 MIT License
 

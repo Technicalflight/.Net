@@ -8,7 +8,7 @@ de4dot：https://github.com/de4dot/de4dot
 
 ## 描述
 
-![image-20220126001529887](./images/image-20220126001529887.png)
+![image-20220126001529887](./king/images/image-20220126001529887.png)
 
 由于技术不是很牛批，NetReactorSlayer按钮没弄好！只能手动到cmd里面执行.....
 
@@ -19,5 +19,5 @@ de4dot：https://github.com/de4dot/de4dot
 
 ## 使用方法
 
-![image-20220126001529887](./images/2.png)
+![image-20220126001529887](./king/images/2.png)
 

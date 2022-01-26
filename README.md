@@ -6,6 +6,8 @@ NetReactorSlayer：https://github.com/SychicBoy/NetReactorSlayer
 
 de4dot：https://github.com/de4dot/de4dot
 
+FinGu-Cfex-Cleaner：https://github.com/CursedLand/FinGu-Cfex-Cleaner
+
 ## 描述
 v 0.0
 

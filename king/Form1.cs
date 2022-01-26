@@ -98,6 +98,38 @@ namespace king
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (var process = new Process())
+            {
+                try
+                {
+                    cmd = "cd" + " " + Application.StartupPath + @"\FinGu-Cleaner" + "&&" + "FinGu-Cleaner.exe" + " " + textBox1.Text + "&exit";
+                    process.StartInfo.FileName = "cmd.exe";
+                    process.StartInfo.UseShellExecute = false;
+                    process.StartInfo.RedirectStandardInput = true;
+                    process.StartInfo.RedirectStandardOutput = true;
+                    process.StartInfo.RedirectStandardError = true;
+                    process.StartInfo.CreateNoWindow = true;
+
+                    process.Start();
+                    process.StandardInput.AutoFlush = true;
+                    process.StandardInput.WriteLine(cmd);
+
+                    textBox2.Text = process.StandardOutput.ReadToEnd();
+
+
+                    process.WaitForExit();
+                    process.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\r\n跟踪;" + ex.StackTrace);
+
+                }
+            }
+        }
     }
 }
 

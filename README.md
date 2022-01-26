@@ -9,12 +9,12 @@ de4dot：https://github.com/de4dot/de4dot
 ## 描述
 v 0.0
 
-![image-20220126001529887](./images/image-20220126001529887.png)
+![image-20220126001529887](./king/images/image-20220126001529887.png)
 
 v 0.1  ：新增一个程序
 
 
-![image-20220126120052815](./images/image-20220126120052815.png)   
+![image-20220126120052815](./king/images/image-20220126120052815.png)   
 
 由于技术不是很牛批，NetReactorSlayer按钮没弄好！只能手动到cmd里面执行.....
 

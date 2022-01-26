@@ -26,7 +26,7 @@ namespace king
         private void button1_Click(object sender, EventArgs e)
         {
             string a = Application.StartupPath;
-            textBox3.Text = "cd "+ a + "&&" + @"NetReactorSlayer-x64.exe" + " " +textBox1.Text;
+            textBox3.Text = "cd " + a + "&&" + @"NetReactorSlayer-x64.exe" + " " + textBox1.Text;
             ExcuteDosCommand(textBox3.Text);
         }
 
@@ -34,7 +34,7 @@ namespace king
 
         private void ExcuteDosCommand(string cmd)
         {
-                MessageBox.Show("这个按钮用不了，自己打开cmd，把上面的第二个框里面的代码复制进去！！(记得先选.NET程序，选完后按一下这个按钮)");
+            MessageBox.Show("这个按钮用不了，自己打开cmd，把上面的第二个框里面的代码复制进去！！(记得先选.NET程序，选完后按一下这个按钮)");
         }
 
 
@@ -122,6 +122,42 @@ namespace king
 
                     process.WaitForExit();
                     process.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + "\r\n跟踪;" + ex.StackTrace);
+
+                }
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            using (var process = new Process())
+            {
+                try
+                {
+                    cmd = "cd" + " " + Application.StartupPath + @"\ExeinfoPe" +  "&&" +"exeinfope.exe" + " " + textBox1.Text +"&exit";
+                    process.StartInfo.FileName = "cmd.exe";
+                    process.StartInfo.UseShellExecute = false;
+                    process.StartInfo.RedirectStandardInput = true;
+                    process.StartInfo.RedirectStandardOutput = true;
+                    process.StartInfo.RedirectStandardError = true;
+                    process.StartInfo.CreateNoWindow = true;
+
+                    process.Start();
+                    process.StandardInput.AutoFlush = true;
+                    process.StandardInput.WriteLine(cmd);
+
+                    string lines = System.IO.File.ReadAllText(Application.StartupPath + @"\ExeinfoPe\Exeinfo.log");
+                    textBox2.Text = cmd + "\n" + lines;
+
+                    process.WaitForExit();
+                    process.Close();
+
+                    FileStream fs = File.Create(Application.StartupPath + @"\ExeinfoPe\Exeinfo.log");
+                    fs.Close();
+
                 }
                 catch (Exception ex)
                 {
